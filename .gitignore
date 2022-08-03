@@ -1,0 +1,13 @@
+# Latex Workshop Extension
+*.aux
+*.log
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.pdf
+*.synctex.gz
+.vscode
+*.bfc
+*.xml
