@@ -1,7 +1,8 @@
 \documentclass{article}
 \input{0.settings/packages.tex}
+\input{0.settings/commands.tex}
 \input{0.settings/style.tex}
-\addbibresource{bib/bib.bib}
+\addbibresource{0.bib/bib.bib}
 
 \title{Design und Implementierung eines Ressource-Management-Games}
 \author{Justin Nicola, Mat. 35441124, Informatik PO2018}
@@ -9,18 +10,22 @@
 \begin{document}
 
 
-\include{cover.tex}
-\maketitle
+\include{0.cover/cover.tex}
 
+
+\include{0.verzeichnisse/0.1.glossar.tex}
+
+
+\maketitle
 \section{Einleitung}
 \input{1.einleitung/1.0.einleitung.tex}
 \input{1.einleitung/1.1.geschichte.tex}
 
 \section{Beispiele}
 \input{2.beispiele/2.0.beispiele.tex}
-\input{2.beispiele/2.1.klassiker.tex}
 
 
+\newpage
 \printbibliography
 
 \end{document}
