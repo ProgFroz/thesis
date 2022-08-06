@@ -2402,18 +2402,12 @@
     <bcf:citekey order="66" intorder="1">simcity:manual</bcf:citekey>
     <bcf:citekey order="67" intorder="1">simcity:manual</bcf:citekey>
     <bcf:citekey order="68" intorder="1">simcity:timeline</bcf:citekey>
-    <bcf:citekey order="81" intorder="1">civigdb</bcf:citekey>
-    <bcf:citekey order="82" intorder="1">civ:review:allgame</bcf:citekey>
-    <bcf:citekey order="83" intorder="1">civ:review:gameinformer</bcf:citekey>
-    <bcf:citekey order="84" intorder="1">civ:review:nextgeneration</bcf:citekey>
-    <bcf:citekey order="85" intorder="1">civallcompare</bcf:citekey>
-    <bcf:citekey order="85" intorder="2">civigdb</bcf:citekey>
-    <bcf:citekey order="85" intorder="3">civwin</bcf:citekey>
-    <bcf:citekey order="85" intorder="4">civ:ressources</bcf:citekey>
-    <bcf:citekey order="86" intorder="1">civallcompare</bcf:citekey>
-    <bcf:citekey order="86" intorder="2">civigdb</bcf:citekey>
-    <bcf:citekey order="86" intorder="3">civwin</bcf:citekey>
-    <bcf:citekey order="86" intorder="4">civ:ressources</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">simcity:igdb</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">simcity:review:allgame</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">simcity:review:macuser</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">simcity:review:segasaturn</bcf:citekey>
+    <bcf:citekey order="85" intorder="1">simcity:igdb</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">simcity:igdb</bcf:citekey>
     <bcf:citekey order="87" intorder="1">simcity:igdb</bcf:citekey>
     <bcf:citekey order="88" intorder="1">simcity:igdb</bcf:citekey>
     <bcf:citekey order="89" intorder="1">simcity:gameover</bcf:citekey>
