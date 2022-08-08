@@ -1,0 +1,32 @@
+\subsection{Definition}
+
+Um die Kategorie der Ressource Management Games zu definieren, ist es essenziell zu erfassen, welche Eigenschaften ein Spiel haben muss, damit es als Ressource Management Game kategorisiert werden kann. Laut \cite*[]{definition:ressourcemanagement} ist Ressource Management \glqq [...] the practice of planning, scheduling, and allocating people, money, and technology to a project or program. In essence, it is the process of allocating resources to achieve the greatest organizational value.\grqq. Demnach sind nicht nur die Ressourcen von großer Bedeutung, sondern auch der Prozess des Zuweisens der jeweiligen Ressourcen, um den daraus größten Nutzen für das derzeitige Ziel zu gewinnen. \cite*[]{definition:ressourcemanagementfandom} geht einen Schritt weiter, und beschreibt das Sammeln und Überwachen der Ressourcen als zentrales Element. Außerdem spielt der Informationsgehalt des Spielers eine Rolle, jedes komplexe Resource Management Game \glqq [...] will involve imperfect decisions, leading to interesting strategy.\grqq \cite*[]{definition:ressourcemanagementfandom}. 
+Im Zentrum dieser Kategorie stehen also die \textit{Ressourcen}, das \textit{Verwalten} dieser Ressourcen innerhalb einer \textit{Ökonomie}, und der zu einem gegebenen Zeitpunkt vorhandene \textit{Informationsgehalt} des Spielers.
+
+\subsubsection{Ressourcen}
+Der erste fundamentale Bestandteil sind die \textit{Ressourcen}. Als Stützpfeiler von Ökonomien kann jegliches Konzept, was numerisch erfasst und gemessen werden kann als Ressource gelten. Speziell auf Spiele bezogen gibt es also etliche Möglichkeiten eine Ressource zu etablieren. So sind Geld, Energie oder eigene Einheiten verschiedene Ressourcen, aber nach genannter Definition auch gegnerische Einheiten, Zeit und Geschwindigkeit. Statische und nicht interaktive Objekte oder Gebäude hingegen sind keine Ressourcen \cite*[]{book:gamedesign:resources}. Für die kommenden Sektionen wird der Begriff der Ressource jedoch folgendermaßen eingeschränkt:
+\begin{center}
+    \textit{Eine Ressource ist eine kontrollierbare, numerisch erfassbar und messbare Größe}
+\end{center}
+Zwar ist Zeit auch im Umgangssprachlichen eine Ressource (vgl. \textit{\glqq Zeitmanagement\grqq}), ist in den meisten Spielen jedoch keine Ressource im herk WIE ERKLÄRE ICH DASS ZEIT KEINE 
+
+Eine Ressource gilt als \textit{greifbar} (engl. \textit{tangible}), wenn diese Ressource in der physischen oder virtuellen Welt tatsächlich existiert und wahrgenommen werden kann. Die Ressource besitzt also eine eindeutige Koordinate im Raum. Beispielhaft dafür wären wiederum Einheiten, Bäume oder Eisenminen. Im Gegensatz dazu stehen \textit{nicht greifbare} (engl. \textit{intangible}) Ressourcen. Darunter fallen alle Ressourcen, die keine Koordinate im physischen oder virtuellen Raum haben. Lebenspunkte einer Einheit sind beispielsweise keine greifbare Ressource. 
+
+Diese beiden Gegensätze können in Wechselwirkung stehen, so kann ein vom Spieler eingesammelter Gegenstand (greifbar) dazu führen, dass sich die Lebenspunkte erhöhen (nicht greifbar), wodurch der eingesammelte Gegenstand aus dem Raum verschwindet. Dadurch entsteht eine Art Transition von einer greifbaren zu einer ungreifbaren Ressource \cite*[]{book:gamedesign:resources}. 
+
+Ressourcen können weiterhin gruppiert werden in \textit{konkret} (engl. \textit{concrete}) oder \textit{abstrakt} (engl. \textit{abstract}). Konkrete Ressourcen sind dabei jegliche Form von Ressourcen, welche der Spieler tatsächlich als diese wahrnimmt, also etwa Holz, Lebenspunkte oder Bäume. Abstrakte Ressourcen hingegen werden nicht vom Spieler als solche erkannt und nicht gezeigt, sondern für Hintergrundberechnungen verwendet. Ein klassisches Beispiel einer solchen Ressource ist der Wert der einzelnen Spielsteine beim Schach. Ein Bauer hat einen numerischen Wert von \textit{1}, die Königin hingegen einen Wert von \textit{9}. Der König hat als einziger Spielstein keinen Wert, da mit dessen Fall das Spiel endet \cite*[]{chesspieces}. Diese Werte werden im Spiel nicht thematisiert und auch nicht in dessen Konzept eingebunden, sondern existieren einzig für den Zweck der Wertebestimmung eines Spielers.
+
+\subsubsection{Ökonomie}
+Eine \textit{Ökonomie}, oder auch \textit{Wirtschaft}, ist ein System und \glqq [...] besteht aus Einrichtungen, Maschinen und Personen, die Angebot und Nachfrage generieren und regulieren.\grqq \cite*[]{definition:economy}. Diesem System sind vier verschiedene Funktionen inne \cite*[]{book:gamedesign:economy}:
+
+\newparagraph{Quellen}
+Als \textit{Quelle} (engl. \textit{source}) wird eine Mechanik beschrieben, welche neue Ressourcen generiert. Ob dabei durch Konditionen ausgelöst oder in kontinuierlichem Fluss ist dabei nicht von Bedeutung. Ein Beispiel einer solchen Quelle ist die natürliche Lebensregeneration von Einheiten, wobei diese Quelle erst mit Erfüllung einer Kondition neue Lebenspunkte generiert, da für gewöhnlich die Lebenspunkte zuerst unter dem Maximum liegen müssen.
+
+\newparagraph{Abflüsse}
+Als \textit{Abflüsse} (engl. \textit{drains}) werden die zu Quellen gegenteiligen Mechaniken beschrieben. Ein Abfluss entfernt also bestimmte Ressourcen aus dem Spiel. In Ego-Shootern ist die Munition hierfür ein gängiges Beispiel, da geschossene Kugeln in keine andere Ressource umgewandelt werden, sondern durch einen \textit{Abfluss} aus dem Spiel entfernt werden.
+
+\newparagraph{Umwandler}
+Ein Umwandler (engl. \textit{converter}) ist die Mechanik einer Transition zwischen verschiedenen Ressourcen. So können Bäume in einer bestimmten Relation zu Holz umgewandelt werden. Für gewöhnlich kann auf diese Relation vom Spieler Einfluss genommen werden, in dem durch beispielsweise technologische Verbesserungen mehr Holz pro Baum erhalten werden kann.
+
+\newparagraph{Händler}
+Die Mechanik des \textit{Händlers} (engl. \textit{trader}) beschreibt den Austausch von Ressourcen. Anders als ein Umwandler werden jedoch keine Ressourcen erschaffen oder zerstört, sondern lediglich vorhandene ausgetauscht. Diesem Austausch liegt eine \textit{Austauschregel} zugrunde, so kann ein beispielsweise in einem virtuellen Laden vorhandener Gegenstand ein gewisser Betrag an Währung kosten. Durch das Durchführen dieses Austausches erhält das Gegenüber dann den in der Austauschregel geforderten Betrag der Währung, und man selber erhält den geforderten Gegenstand.
