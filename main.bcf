@@ -2424,6 +2424,11 @@
     <bcf:citekey order="99" intorder="1">simcity:igdb</bcf:citekey>
     <bcf:citekey order="100" intorder="1">simcity:gameover</bcf:citekey>
     <bcf:citekey order="101" intorder="1">simcity:gameover</bcf:citekey>
+    <bcf:citekey order="102" intorder="1">rimworld:colonist</bcf:citekey>
+    <bcf:citekey order="103" intorder="1">rimworld:backstories</bcf:citekey>
+    <bcf:citekey order="104" intorder="1">rimworld:traits</bcf:citekey>
+    <bcf:citekey order="105" intorder="1">rimworld:mentalbreak</bcf:citekey>
+    <bcf:citekey order="106" intorder="1">rimworld:events</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
