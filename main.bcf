@@ -2429,6 +2429,10 @@
     <bcf:citekey order="104" intorder="1">rimworld:traits</bcf:citekey>
     <bcf:citekey order="105" intorder="1">rimworld:mentalbreak</bcf:citekey>
     <bcf:citekey order="106" intorder="1">rimworld:events</bcf:citekey>
+    <bcf:citekey order="107" intorder="1">rimworld:resources</bcf:citekey>
+    <bcf:citekey order="108" intorder="1">holtzblatt_beyer_1997</bcf:citekey>
+    <bcf:citekey order="109" intorder="1">baur_blasius</bcf:citekey>
+    <bcf:citekey order="110" intorder="1">lankoski_bjork</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
