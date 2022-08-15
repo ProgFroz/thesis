@@ -2433,6 +2433,19 @@
     <bcf:citekey order="108" intorder="1">holtzblatt_beyer_1997</bcf:citekey>
     <bcf:citekey order="109" intorder="1">baur_blasius</bcf:citekey>
     <bcf:citekey order="110" intorder="1">lankoski_bjork</bcf:citekey>
+    <bcf:citekey order="111" intorder="1">bees:name</bcf:citekey>
+    <bcf:citekey order="112" intorder="1">bees:wild</bcf:citekey>
+    <bcf:citekey order="113" intorder="1">bees:food</bcf:citekey>
+    <bcf:citekey order="114" intorder="1">bees:honeywinter</bcf:citekey>
+    <bcf:citekey order="115" intorder="1">bees:food</bcf:citekey>
+    <bcf:citekey order="116" intorder="1">bees:glucosefructose</bcf:citekey>
+    <bcf:citekey order="117" intorder="1">bees:nectartohoney</bcf:citekey>
+    <bcf:citekey order="118" intorder="1">bees:honeywinter</bcf:citekey>
+    <bcf:citekey order="119" intorder="1">bees:honeywinter</bcf:citekey>
+    <bcf:citekey order="120" intorder="1">bees:name</bcf:citekey>
+    <bcf:citekey order="121" intorder="1">bees:name</bcf:citekey>
+    <bcf:citekey order="122" intorder="1">bees:honeywinter</bcf:citekey>
+    <bcf:citekey order="122" intorder="2">bees:food</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
