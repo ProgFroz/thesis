@@ -122,23 +122,30 @@ Die genetischen Eigenschaften beziehungsweise \textit{Traits} sind immer exakt d
     \item Verflucht: $\frac{1}{3} \times \frac{1}{2} = \frac{1}{6}$
     \item Verdampfer: $\frac{1}{3} \times \frac{1}{2} = \frac{1}{6}$
 \end{itemize} Die Traits, welche speziell auf eine gewisse Art von Kaste gelten, werden im Hintergrund gespeichert und es wird ein neuer Trait gezogen. Dieser wird sich vorgemerkt. Sollte die Arbeitsbienenlarve also zur Königin herangezogen werden, wird der vorgemerkte Trait durch den Erstgezogenen ersetzt.
+
+\paragraph{Mutation}
+Damit eine Diversität entstehen kann, und nicht stetig die gleichen Traits in der Kolonie weitervererbt werden, bedarf es der Möglichkeit einer Mutation. Es besteht eine geringe Chance, dass \textit{nach dem Ziehen} eines vererbten Traits, dieser Trait durch einen völlig anderen ersetzt wird.
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
 \begin{table}[]
     \centering
     \caption{Mögliche Traits einer Biene}
     \label{table:traits}
+    \resizebox{\columnwidth}{!}{%
     \begin{tabular}{|l|l|l|}
     \hline
-    Arbeitsfreudig / Arbeitsscheu (Alle)        & Erledigt alle Aufgaben 10\% schneller / langsamer                                                   & 12\% \\ \hline
-    Sammelfreudig / Sammelscheu (Arbeitsbiene)  & Sammelt Ressourcen 15\% schneller / langsamer                                                       & 12\% \\ \hline
-    Fingerfertig / Grobmotorisch (Arbeitsbiene) & Stellt neue Ressourcen 10\% schneller / langsamer her                                               & 12\% \\ \hline
-    Sparsam / Freigiebig (Arbeitsbiene)         & Verbraucht beim Füttern etwas weniger / mehr Nahrung                                                & 12\% \\ \hline
-    Empfänglich / Unempfänglich (Königin)       & Benötigt weniger / mehr Drohnen um die Samen zu füllen und hat mehr / weniger Kapazität             & 12\% \\ \hline
-    Gesegnet / Verflucht (Alle)                 & Lebt ein längeres / kürzeres Leben                                                                  & 12\% \\ \hline
-    Wasserspeicher / Verdampfer (Alle)          & Benötigt weniger / mehr Wasser und verbraucht weniger / mehr                                        & 12\% \\ \hline
-    Kleiner / Großer Magen (Alle)               & Benötigt weniger / mehr Nahrung und verbraucht weniger / mehr                                       & 12\% \\ \hline
-    Königliche Immunität (Drone)                & Die Drohne ist ausgenommen von der Bienenschlacht und darf weiterhin im Stock bleiben               & 2\%  \\ \hline
-    Schillernd (Alle)                           & Die Biene scheint eine mutierte Farbpalette zu besitzen und sieht anders aus als gewöhnliche Bienen & 2\%  \\ \hline
-    \end{tabular}
+    Arbeitsfreudig / Arbeitsscheu (Alle)        & Erledigt alle Aufgaben 10\% schneller / langsamer                                        & 12\% \\ \hline
+    Sammelfreudig / Sammelscheu (Arbeitsbiene)  & Sammelt Ressourcen 15\% schneller / langsamer                                            & 12\% \\ \hline
+    Fingerfertig / Grobmotorisch (Arbeitsbiene) & Stellt neue Ressourcen 10\% schneller / langsamer her.                                   & 12\% \\ \hline
+    Sparsam / Freigiebig (Arbeitsbiene)         & Verbraucht beim Füttern etwas weniger / mehr Nahrung.                                    & 12\% \\ \hline
+    Empfänglich / Unempfänglich (Königin)       & Benötigt weniger / mehr Drohnen um die Samen zu füllen und hat mehr / weniger Kapazität. & 12\% \\ \hline
+    Gesegnet / Verflucht (Alle)                 & Lebt ein längeres / kürzeres Leben.                                                      & 12\% \\ \hline
+    Wasserspeicher / Verdampfer (Alle)          & Benötigt weniger / mehr Wasser und verbraucht weniger / mehr.                            & 12\% \\ \hline
+    Kleiner / Großer Magen (Alle)               & Benötigt weniger / mehr Nahrung und verbraucht weniger / mehr.                           & 12\% \\ \hline
+    Königliche Immunität (Drone)                & Die Drohne ist ausgenommen von der Drohnenschlacht.                                      & 2\%  \\ \hline
+    Schillernd (Alle)                           & Die Biene sieht anders aus als gewöhnliche Bienen.                                       & 2\%  \\ \hline
+    \end{tabular}%
+    }
     \end{table}
 
 
@@ -172,3 +179,14 @@ Es gibt, analog zu den Aktionen, 6 verschiedene, baubare Strukturen. Diese diene
 \paragraph{Brutwaben} werden für die Fortpflanzung beziehungsweise Eierhaltung der Königin verwendet. Junge Arbeitsbienen werden lediglich angeordnet Nektar oder Honig zu liefern. Wird die Larve zu einer Puppe, muss außerdem von einer Arbeitsbiene die Brutwabe durch Bienenwachs bedeckt werden.
 
 \paragraph{Königliche Brutwaben} sind ähnlich zu den normalen Brutwaben, mit der Ausnahme, dass lediglich befruchtete Eier dort gelegt werden können, und die jungen Arbeitsbienen zu der Larve Royal Jelly geben, falls vorhanden.
+
+\subsubsection{Brutvorgang}
+Um neue Bienen herzustellen werden, wie bereits zuvor erläutert und in \autoref{image:reproductionloop} erkennbar, verschiedene Bienen für verschiedene Resultate benötigt. Wird ein Ei in eine Brutkammer gelegt, beginnt ab diesem Zeitpunkt die Metamorphose, analog zu den In \textit{Sektion 4.1.4} erläuterten Vorgängen. Das gelegte Ei wird nach einer gegebenen Zeit zu einer Larve, danach zu einer Puppe und anschließend zu einer voll ausgewachsenen Biene.
+
+\paragraph{Stadium 1: Ei} Das Ei liegt nach dem Legen in der Brutwabe. Zu diesem Stadium ist lediglich erkennbar, ob befruchtet oder unbefruchtet. Die Wabe muss ein Mal mit Nahrung, vorzugsweise Nektar oder Honig, gefüllt werden, damit das Ei überlebt. Nach einigen Tagen schlüpft daraus eine Larve und die Nahrung in der Brutwabe ist verbraucht.
+
+\paragraph{Stadium 2: Larve} Die Larve ist das Stadium, in welchem Royal Jelly dazugegeben werden kann. Liegt das Ei in einer Königlichen Brutkammer, wird einmalig Royal Jelly statt gewöhnlicher Nahrung dazugegeben. Damit entwickelt sich eine königliche Puppe statt einer herkömmlichen und die Nahrung wird verbraucht.
+
+\paragraph{Stadium 3: Puppe} Die Puppe benötigt, anders als die anderen Stadien, zusätzlich zur Nahrung noch Bienenwachs, welches die Brutwabe bedeckt. Zuerst muss Nahrung dazugegeben, danach die Wabe bedeckt werden. Sobald die Biene alt genug ist, schlüpft sie aus der Puppe und bricht durch die Wachsschicht. Eine erwachsene Biene ist somit herangereift.
+
+\paragraph{Stadium 4: Ausgewachsen} Das ausgewachsene Stadium ermöglicht sämtliche Aktionen einer Biene. In diesem Stadium befinden sich die meisten Bienen. 
