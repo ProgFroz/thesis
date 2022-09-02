@@ -1,5 +1,8 @@
 \subsection{Mechaniken}
-Es wurden nun in \textit{Sektion 2} und \textit{Sektion 3} einige Mechaniken und Eigenheiten von älteren und neu erschienen Management Games untersucht und Hypothesen dazu angeführt. Diese Hypothesen und Mechaniken, welche sich als besonders interessant und nutzerfreundlich erweisen, werden nun unter Berücksichtigung der in \textit{Sektion 4.1} erörterten Vorgänge innerhalb einer Bienenkolonie konkretisiert und ausgefeilt. Außerdem werden die in \textit{Sektion 1} definierten Eigenschaften eines Resource Management Games berücksichtigt und versucht, die untersuchten Gegebenheiten (Ressourcen, Ökonomie, Informationsgehalt und Verwaltungsaspekte) möglichst sinnvoll mit den Vorgängen einer Bienenkolonie zu kombinieren, um daraus ein Spiel zu gestalten, welches sehr stark an die echten Vorgänge einer solchen angelehnt ist. 
+Es wurden nun in \textit{Sektion 2} und \textit{Sektion 3} einige Mechaniken und Eigenheiten von älteren und neu erschienen Management Games untersucht und Hypothesen dazu angeführt. Diese Hypothesen und Mechaniken, welche sich als besonders interessant und nutzerfreundlich erweisen, werden nun unter Berücksichtigung der in \textit{Sektion 4.1} erörterten Vorgänge innerhalb einer Bienenkolonie konkretisiert und ausgefeilt. Außerdem werden die in \textit{Sektion 1} definierten Eigenschaften eines Resource Management Games berücksichtigt und versucht, die untersuchten Gegebenheiten (Ressourcen, Ökonomie, Informationsgehalt und Verwaltungsaspekte) möglichst sinnvoll mit den Vorgängen einer Bienenkolonie zu kombinieren, um daraus ein Spiel zu gestalten, welches sehr stark an die echten Vorgänge einer solchen angelehnt ist. Im folgende referenzierte Hypothesen aus \autoref{table:hypotheses} werden mit [HX] abgekürzt, wobei X für die jeweilige Nummer der Hypothese steht.
+
+\subsubsection{Anweisungsstil}
+Wie sich in den Interviews und der Analyse von RimWorld gezeigt hat, lassen sich die Art, auf welche Anweisungen an die jeweiligen Einheiten erteilt werden, in \textit{direktes} und \textit{indirektes} Anweisen beziehungsweise Zuweisen. Während in den bereits vorgestellten Titeln meistens auf eine direkte Anweisung der Einheiten zurückgegriffen wird, stellt RimWorld eine Neuerung dar, welche laut [H15] für das Genre des Colony Managements als durchaus positiv von den Probanden aufgefasst wird. Daher wird dieser Anweisungsstil, mitsamt der Prioritätenliste [H13], welche mittels Grafiken verständlicher gemacht wird [H14].
 
 \subsubsection{Ressourcen}
 Die im Spiel vorhandenen Ressourcen sind in \autoref{table:resources} aufgelistet. Die Gründe für die Auswahl der Ressourcen sind \textit{Sektion 4.1.1} zu finden. \textit{Honigtau} wird nicht als Ressource implementiert, da diese von lebenden Tieren extrahiert wird, und aufgrund von weiteren benötigten Modellen und Animationen keine weiteren Tiere neben den eigentlichen Bienen implementiert werden. Um das Spiel spannender und etwas komplexer zu gestalten werden verschiedene \textit{Sources}, \textit{Converter} und \textit{Drains} (vgl. \textit{Sektion 1.1.2}) verwendet. Alle involvierten Ressourcen, wie auch baubare Waben, sind in \autoref{image:resourceloop} skizziert. Die Zahlen sind dabei rein experimentell und müssen im Verlauf der Tests gegebenenfalls angepasst werden.
@@ -37,7 +40,7 @@ Eine weitere fundamentale Ressource ist das Gelée Royal oder auch \textit{Royal
 Die einzige nicht vom Spieler sammelbare oder lagerbare Ressource ist Wasser. Dieses müssen die Bienen durch Nahrung aufnehmen (Nektar besitzt mehr Wasser als Honig), oder über das Trinken an einem Fluss. Da im Winter keine Ausflüge gestattet sind, ist es wichtig, dass Bienen vor dem Winter genug Wasser zu sich nehmen, um nicht zu verdursten.
 
 \paragraph{Königin, Drohne und Arbeitsbiene}
-Diese greifbaren Ressourcen sind das Fundament des Spiels, wobei neue Bienen, analog zu \textit{Sektion 4.1.3}, kastenspezifisch herangezogen werden können, mehr dazu im Folgenden Abschnitt.
+Diese greifbaren Ressourcen sind das Fundament des Spiels, wobei neue Bienen, analog zu \textit{Sektion 4.1.3}, Kasten-spezifisch herangezogen werden können, mehr dazu im folgenden Abschnitt.
 
 \begin{figure}
     \begin{center}
@@ -101,7 +104,7 @@ Das Inventar besitzt jede Biene und zeigt an, was diese gerade trägt. Getragen 
 Der momentane Auftrag ist ebenfalls Teil der Biene. Dieser zeigt dem Nutzer, was diese Biene gerade vorhat und wieso sie sich zu der bestimmten Stelle bewegt.
 
 \paragraph{Genetische Eigenschaften / Traits} 
-Die genetischen Eigenschaften beziehungsweise \textit{Traits} sind immer exakt drei Stück. Diese können sowohl \textit{positive} als auch \textit{negative} Auswirkungen auf die Effizienz der einzelnen Biene haben. Die möglichen Traits und ihre Wahrscheinlichkeiten sind in \autoref{table:traits} zu finden. Die Traits sind vererbbar, wobei bei der Vererbung eine Chance besteht, dass ein Trait \textit{mutiert} und deshalb in einen anderen, zufälligen, geändert wird. Wird eine Königin von mehreren verschiedenen Drohnen besamt, werden die Erbinformationen gespeichert. Ob der jeweilige Trait nun von der Seite des Vaters oder der Seite der Mutter übernommen wird, ist gleichverteilt 50:50. Seien die besamenden Drohnen folgende:
+Die genetischen Eigenschaften beziehungsweise \textit{Traits} sind immer exakt drei Stück und werden nach [H6] in überschaubarer Anzahl gehalten und so benannt, dass aus dem Namen der Effekt grundlegend ersichtlich ist. Diese können sowohl \textit{positive} als auch \textit{negative} Auswirkungen auf die Effizienz der einzelnen Biene haben, wobei nicht eindeutig erkennbar sein soll, welcher der effektiv beste oder schlechteste Trait ist, der zur Auswahl steht, um [H7] nachzugehen, und Nutzer-eigene Strategien zu fördern. Die möglichen Traits und ihre Wahrscheinlichkeiten sind in \autoref{table:traits} zu finden. Die Traits sind vererbbar, wobei bei der Vererbung eine Chance besteht, dass ein Trait \textit{mutiert} und deshalb in einen anderen, zufälligen, geändert wird. Wird eine Königin von mehreren verschiedenen Drohnen besamt, werden die Erbinformationen gespeichert. Ob der jeweilige Trait nun von der Seite des Vaters oder der Seite der Mutter übernommen wird, ist gleichverteilt 50:50. Seien die besamenden Drohnen folgende:
 
 \begin{itemize}
     \item Drohne A: Schillernd, Arbeitsfreudig, Gesegnet
@@ -168,13 +171,13 @@ Es gibt 6 verschiedene, vom Spieler ausführbare, Anordnungen. Diese werden verw
 \subsubsection{Strukturen}
 Es gibt, analog zu den Aktionen, 6 verschiedene, baubare Strukturen. Diese dienen in den meisten Fällen als \textit{Converter} und Arbeitsstätte der Bienen, aber auch als Lagerplatz. Sämtliche baubare Strukturen sind \autoref{image:resourceloop} zu entnehmen.
 
-\paragraph{Evaporator} ist ein Converter, um aus Nektar Honig herzustellen. Dieser wird, wie in \autoref{image:resourceloop} erkennbar, aus Pollen hergestellt. Mit Klick auf den gebauten Evaporator können Aufträge erstellt werden, wodurch festgelegt werden kann, wie viel Honig hergestellt werden soll. Für diese Aufträge müssen Bienen am Evaporator arbeiten.
+\paragraph{Evaporator} ist ein Converter, um aus Nektar Honig herzustellen, und dient der Erfüllung von [H12]. Dieser wird, wie in \autoref{image:resourceloop} erkennbar, aus Pollen hergestellt. Mit Klick auf den gebauten Evaporator können Aufträge erstellt werden, wodurch festgelegt werden kann, wie viel Honig hergestellt werden soll. Für diese Aufträge müssen Bienen am Evaporator arbeiten.
 
-\paragraph{Mixer} ist ebenfalls ein Converter und wird verwendet, um aus Honig und Pollen Bienenwachs herzustellen. Zum Bau dieser Struktur wird Honig verwendet, wodurch ein zuvor gebauter Evaporator sinnvoll ist. Das Auftragssystem ist analog zum Evaporator.
+\paragraph{Mixer} ist ebenfalls ein Converter, erfüllt ebenfalls [H12] und wird verwendet, um aus Honig und Pollen Bienenwachs herzustellen. Zum Bau dieser Struktur wird Honig verwendet, wodurch ein zuvor gebauter Evaporator sinnvoll ist. Das Auftragssystem ist analog zum Evaporator.
 
-\paragraph{Refiner} wird verwendet, um aus Honig und Pollen Royal Jelly herzustellen, wobei für den Bau dieser Struktur Bienenwachs verwendet wird. Dadurch kann es sinnvoll sein, einen Mixer gebaut zu haben. Das Auftragssystem ist analog zu dem Evaporator und dem Mixer.
+\paragraph{Refiner} wird verwendet, um aus Honig und Pollen Royal Jelly herzustellen, wobei für den Bau dieser Struktur Bienenwachs verwendet wird. Dadurch kann es sinnvoll sein, einen Mixer gebaut zu haben. Das Auftragssystem ist analog zu dem Evaporator und dem Mixer und dient ebenfalls der Erfüllung von [H12].
 
-\paragraph{Lagerwaben} sind essenziell zum Speichern und Lagern bestimmter Ressourcen. In diesen Lagerwaben können Nektar, Pollen, Honig, Royal Jelly und Bienenwachs gespeichert werden, wobei eine Lagerwabe nur eine Art von Ressource halten kann, und ebenfalls ein quantitatives Limit für diese Ressource besitzt. Für den Bau einer Lagerwabe wird Bienenwachs verwendet.
+\paragraph{Lagerwaben} sind essenziell zum Speichern und Lagern bestimmter Ressourcen. In diesen Lagerwaben können Nektar, Pollen, Honig, Royal Jelly und Bienenwachs gespeichert werden, wobei eine Lagerwabe nur eine Art von Ressource halten kann, und ebenfalls ein quantitatives Limit für diese Ressource besitzt. Für den Bau einer Lagerwabe wird Bienenwachs verwendet. Diese Lagerstruktur dient als klare, baubare Struktur der Erfüllung von [H9].
 
 \paragraph{Brutwaben} werden für die Fortpflanzung beziehungsweise Eierhaltung der Königin verwendet. Junge Arbeitsbienen werden lediglich angeordnet Nektar oder Honig zu liefern. Wird die Larve zu einer Puppe, muss außerdem von einer Arbeitsbiene die Brutwabe durch Bienenwachs bedeckt werden.
 
@@ -190,3 +193,14 @@ Um neue Bienen herzustellen werden, wie bereits zuvor erläutert und in \autoref
 \paragraph{Stadium 3: Puppe} Die Puppe benötigt, anders als die anderen Stadien, zusätzlich zur Nahrung noch Bienenwachs, welches die Brutwabe bedeckt. Zuerst muss Nahrung dazugegeben, danach die Wabe bedeckt werden. Sobald die Biene alt genug ist, schlüpft sie aus der Puppe und bricht durch die Wachsschicht. Eine erwachsene Biene ist somit herangereift.
 
 \paragraph{Stadium 4: Ausgewachsen} Das ausgewachsene Stadium ermöglicht sämtliche Aktionen einer Biene. In diesem Stadium befinden sich die meisten Bienen. 
+
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=300px]{0.bilder/timecontrol.png}
+    \end{center}
+    \caption{Zeitsteuerung Zustandsdiagramm} \label{image:timecontrol}
+\end{figure}
+
+\subsubsection{Zeitsteuerung}
+Analog zu RimWorld wird nach [H21] eine Zeitsteuerung zur besseren Kontrolle eingeführt. Zur Auswahl stehen dabei \textit{Pause} beziehungsweise \textit{Fortführen} (engl. \textit{Resume}) als sich abwechselnde Zustände, und weiterhin \textit{Normal} und \textit{Erhöht}, wobei \textit{Pause} die Geschwindigkeit des Spiels auf $g=0$ setzt, \textit{Normal} die Geschwindigkeit auf $g=1$ setzt, und \textit{Erhöht} die Geschwindigkeit auf $g=2$ setzt. Allerdings wird eine intelligentere Logik verwendet, um das Nutzererlebnis zu erhöhen, welche in \autoref{image:timecontrol} veranschaulicht wird. Pausiert der Nutzer das Spiel, während die Geschwindigkeit auf g=2 steht, wird sich dieser Wert gemerkt, und bei Klick auf den nun vorhandenen Resume-Button wiederhergestellt. Analog funktioniert dieser Prozess auch bei g=1.
+
