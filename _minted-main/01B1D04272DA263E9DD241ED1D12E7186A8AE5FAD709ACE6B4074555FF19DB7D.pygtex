@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{private}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{AssignJobs}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{p}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{jobQueue}\PYG{p}{.}\PYG{n}{Count}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{p}{++)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{JobOrder}\PYG{+w}{ }\PYG{n}{jobOrder}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{jobQueue}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}
+\PYG{+w}{        }\PYG{n}{Bee}\PYG{+w}{ }\PYG{n}{bee}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{jobOrder}\PYG{p}{.}\PYG{n}{AssignedBee}\PYG{+w}{ }\PYG{p}{==}\PYG{+w}{ }\PYG{k}{null}\PYG{+w}{ }\PYG{p}{?}\PYG{+w}{ }\PYG{n}{FindBee}\PYG{p}{(}\PYG{n}{jobOrder}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{n}{jobOrder}\PYG{p}{.}\PYG{n}{AssignedBee}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{bee}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{jobOrder}\PYG{p}{.}\PYG{n}{AssignedBee}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{bee}\PYG{p}{;}
+\PYG{+w}{            }\PYG{n}{bee}\PYG{p}{.}\PYG{n}{AssignJob}\PYG{p}{(}\PYG{n}{jobOrder}\PYG{p}{);}
+\PYG{+w}{            }\PYG{k}{this}\PYG{p}{.}\PYG{n}{activeJobs}\PYG{p}{.}\PYG{n}{Add}\PYG{p}{(}\PYG{n}{jobOrder}\PYG{p}{);}
+\PYG{+w}{            }\PYG{k}{this}\PYG{p}{.}\PYG{n}{jobQueue}\PYG{p}{.}\PYG{n}{Remove}\PYG{p}{(}\PYG{n}{jobOrder}\PYG{p}{);}
+\PYG{+w}{            }\PYG{n}{bee}\PYG{p}{.}\PYG{n}{Travel}\PYG{p}{(}\PYG{n}{jobOrder}\PYG{p}{.}\PYG{n}{Cell}\PYG{p}{);}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

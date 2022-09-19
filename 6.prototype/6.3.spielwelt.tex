@@ -36,11 +36,49 @@ Möchte man also Bewegungen von Einheiten in 6 statt 4 Richtungen ermöglichen, 
 \end{figure}
 
 \subsubsection{Generierung}
-Das Terrain beziehungsweise Grid wird über einen vielschichtigen Algorithmus generiert, welcher die gesamte Fläche in Columns und die Columns wiederum in Chunks unterteilt. Der Algorithmus wurde mittels eines im Internet gefundenen Tutorials \cite*[]{world:tutorial} erarbeitet und anschließend angepasst. Mittels der Methode \textit{GenerateMap} (vgl. \autoref{image:codeworldgeneration}) kann von außerhalb dann der Algorithmus verwendet werden. Es gibt etliche Variationen zur Anpassung, darunter ein Seed, welcher die Generierung beeinflusst, Meeresspiegel, Erosion, Feuchtigkeit und Temperatur, es ist damit viel Diversität zwischen verschiedener Karten gegeben. In dieser Arbeit wird nicht weiter auf dieses Tutorial eingegangen, ist jedoch für weitere Informationen verlinkt. Der Bienenstock ist in dem Prototypen lediglich eine kleinere Version der generierten Außenwelt und noch nicht visuell als Bienenstock erkennbar. Dies wird in zukünftigen Iterationen angepasst und gelb und orange eingefärbt. Außerdem soll ein Ausgang für die Bienen in dem Bienenstock generiert werden, durch welchen die Einheiten sich von Bienenstock nach Außenwelt und umgekehrt bewegen können. 
+Das Terrain beziehungsweise Grid wird über einen vielschichtigen Algorithmus generiert, welcher die gesamte Fläche in Columns und die Columns wiederum in Chunks unterteilt. Der Algorithmus wurde mittels eines im Internet gefundenen Tutorials \cite*[]{world:tutorial} erarbeitet und anschließend angepasst. Mittels der Methode \textit{GenerateMap} (vgl. \autoref{code:worldgeneration}) kann von außerhalb dann der Algorithmus verwendet werden. Es gibt etliche Variationen zur Anpassung, darunter ein Seed, welcher die Generierung beeinflusst, Meeresspiegel, Erosion, Feuchtigkeit und Temperatur, es ist damit viel Diversität zwischen verschiedener Karten gegeben. In dieser Arbeit wird nicht weiter auf dieses Tutorial eingegangen, ist jedoch für weitere Informationen verlinkt. Der Bienenstock ist in dem Prototypen lediglich eine kleinere Version der generierten Außenwelt und noch nicht visuell als Bienenstock erkennbar. Dies wird in zukünftigen Iterationen angepasst und gelb und orange eingefärbt. Außerdem soll ein Ausgang für die Bienen in dem Bienenstock generiert werden, durch welchen die Einheiten sich von Bienenstock nach Außenwelt und umgekehrt bewegen können. 
 
-\begin{figure}
-    \begin{center}
-        \includegraphics[width=200px]{0.bilder/codeworldgeneration.png}
-    \end{center}
-    \caption{Methode zur Generierung der Welt} \label{image:codeworldgeneration}
-\end{figure}
+\definecolor{LightGray}{gray}{0.9}
+\begin{listing}[H]
+\caption{World Generation}
+\label{code:worldgeneration}
+\begin{minted}[
+bgcolor=LightGray,
+framesep=2mm,
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos,
+]{csharp}
+public void GenerateMap (int x, int z, bool wrapping) {
+    Random.State originalRandomState = Random.state;
+    if (!useFixedSeed) {
+        seed = Random.Range(0, int.MaxValue);
+        seed ^= (int)System.DateTime.Now.Ticks;
+        seed ^= (int)Time.unscaledTime;
+        seed &= int.MaxValue;
+    }
+    Random.InitState(seed);
+
+    cellCount = x * z;
+    overworldGrid.CreateMap(x, z, wrapping);
+    if (searchFrontier == null) {
+        searchFrontier = new HexCellPriorityQueue();
+    }
+    for (int i = 0; i < cellCount; i++) {
+        overworldGrid.GetCell(i).WaterLevel = waterLevel;
+    }
+    CreateRegions();
+    CreateLand();
+    ErodeLand();
+    CreateClimate();
+    CreateRivers();
+    SetTerrainType();
+    for (int i = 0; i < cellCount; i++) {
+        overworldGrid.GetCell(i).SearchPhase = 0;
+        overworldGrid.GetCell(i).MapType = HexMapType.Overworld;
+    }
+
+    Random.state = originalRandomState;
+}
+\end{minted}
+\end{listing}

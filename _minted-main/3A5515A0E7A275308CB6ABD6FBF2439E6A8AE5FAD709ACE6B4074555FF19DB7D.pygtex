@@ -1,0 +1,33 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{public}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{GenerateMap}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{z}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{bool}\PYG{+w}{ }\PYG{n}{wrapping}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{n}{Random}\PYG{p}{.}\PYG{n}{State}\PYG{+w}{ }\PYG{n}{originalRandomState}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{Random}\PYG{p}{.}\PYG{n}{state}\PYG{p}{;}
+\PYG{+w}{		}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(!}\PYG{n}{useFixedSeed}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n}{seed}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{Random}\PYG{p}{.}\PYG{n}{Range}\PYG{p}{(}\PYG{l+m}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{p}{.}\PYG{n}{MaxValue}\PYG{p}{);}
+\PYG{+w}{			}\PYG{n}{seed}\PYG{+w}{ }\PYG{p}{\PYGZca{}=}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{int}\PYG{p}{)}\PYG{n}{System}\PYG{p}{.}\PYG{n}{DateTime}\PYG{p}{.}\PYG{n}{Now}\PYG{p}{.}\PYG{n}{Ticks}\PYG{p}{;}
+\PYG{+w}{			}\PYG{n}{seed}\PYG{+w}{ }\PYG{p}{\PYGZca{}=}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{int}\PYG{p}{)}\PYG{n}{Time}\PYG{p}{.}\PYG{n}{unscaledTime}\PYG{p}{;}
+\PYG{+w}{			}\PYG{n}{seed}\PYG{+w}{ }\PYG{p}{\PYGZam{}=}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{p}{.}\PYG{n}{MaxValue}\PYG{p}{;}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{		}\PYG{n}{Random}\PYG{p}{.}\PYG{n}{InitState}\PYG{p}{(}\PYG{n}{seed}\PYG{p}{);}
+
+\PYG{+w}{		}\PYG{n}{cellCount}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{p}{*}\PYG{+w}{ }\PYG{n}{z}\PYG{p}{;}
+\PYG{+w}{		}\PYG{n}{overworldGrid}\PYG{p}{.}\PYG{n}{CreateMap}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{z}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{wrapping}\PYG{p}{);}
+\PYG{+w}{		}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{searchFrontier}\PYG{+w}{ }\PYG{p}{==}\PYG{+w}{ }\PYG{k}{null}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n}{searchFrontier}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{HexCellPriorityQueue}\PYG{p}{();}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{		}\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{p}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{cellCount}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{p}{++)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n}{overworldGrid}\PYG{p}{.}\PYG{n}{GetCell}\PYG{p}{(}\PYG{n}{i}\PYG{p}{).}\PYG{n}{WaterLevel}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{waterLevel}\PYG{p}{;}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{		}\PYG{n}{CreateRegions}\PYG{p}{();}
+\PYG{+w}{		}\PYG{n}{CreateLand}\PYG{p}{();}
+\PYG{+w}{		}\PYG{n}{ErodeLand}\PYG{p}{();}
+\PYG{+w}{		}\PYG{n}{CreateClimate}\PYG{p}{();}
+\PYG{+w}{		}\PYG{n}{CreateRivers}\PYG{p}{();}
+\PYG{+w}{		}\PYG{n}{SetTerrainType}\PYG{p}{();}
+\PYG{+w}{		}\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{p}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{cellCount}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{p}{++)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n}{overworldGrid}\PYG{p}{.}\PYG{n}{GetCell}\PYG{p}{(}\PYG{n}{i}\PYG{p}{).}\PYG{n}{SearchPhase}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m}{0}\PYG{p}{;}
+\PYG{+w}{			}\PYG{n}{overworldGrid}\PYG{p}{.}\PYG{n}{GetCell}\PYG{p}{(}\PYG{n}{i}\PYG{p}{).}\PYG{n}{MapType}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{HexMapType}\PYG{p}{.}\PYG{n}{Overworld}\PYG{p}{;}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{		}\PYG{n}{Random}\PYG{p}{.}\PYG{n}{state}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{originalRandomState}\PYG{p}{;}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

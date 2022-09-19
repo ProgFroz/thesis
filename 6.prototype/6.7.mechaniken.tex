@@ -2,7 +2,7 @@
 Es wurden nun in \textit{Sektion 2} und \textit{Sektion 3} einige Mechaniken und Eigenheiten von älteren und neu erschienen Management Games untersucht und Hypothesen dazu angeführt. Diese Hypothesen und Mechaniken, welche sich als besonders interessant und nutzerfreundlich erweisen, werden nun unter Berücksichtigung der in \textit{Sektion 4.1} erörterten Vorgänge innerhalb einer Bienenkolonie konkretisiert und ausgefeilt. Außerdem werden die in \textit{Sektion 1} definierten Eigenschaften eines Resource Management Games berücksichtigt und versucht, die untersuchten Gegebenheiten (Ressourcen, Ökonomie, Informationsgehalt und Verwaltungsaspekte) möglichst sinnvoll mit den Vorgängen einer Bienenkolonie zu kombinieren, um daraus ein Spiel zu gestalten, welches sehr stark an die echten Vorgänge einer solchen angelehnt ist. Im folgende referenzierte Hypothesen aus \autoref{table:hypotheses} werden mit [HX] abgekürzt, wobei X für die jeweilige Nummer der Hypothese steht.
 
 \subsubsection{Anweisungsstil}
-Wie sich in den Interviews und der Analyse von RimWorld gezeigt hat, lassen sich die Art, auf welche Anweisungen an die jeweiligen Einheiten erteilt werden, in \textit{direktes} und \textit{indirektes} Anweisen beziehungsweise Zuweisen. Während in den bereits vorgestellten Titeln meistens auf eine direkte Anweisung der Einheiten zurückgegriffen wird, stellt RimWorld eine Neuerung dar, welche laut [H15] für das Genre des Colony Managements als durchaus positiv von den Probanden aufgefasst wird. Daher wird dieser Anweisungsstil, mitsamt der Prioritätenliste [H13], welche mittels Grafiken verständlicher gemacht wird [H14]. Diese Grafiken finden sich in \autoref{image:prioritylist} wieder. Es gibt fünf verschiedene Prioritätszustände pro Tätigkeitsbereich pro Biene. Falls die Biene aufgrund ihrer Kaste oder ihres Alters eine bestimmte Tätigkeit nicht machen kann, ist der Button nicht vorhanden. Ansonsten gilt, dass ein grüner Pfeil nach oben bedeutet \textit{Hohe Priorität}, ein gelber Strich bedeutet \textit{Mittlere Priorität}, ein roter Pfeil nach unten bedeutet \textit{Niedrige Priorität}. Falls keine Grafik in dem Button angezeigt wird, steht dies für \textit{Untätig}, womit der Spieler auch entscheiden kann, dass manche Bienen bestimmte Tätigkeiten nicht erledigen, selbst wenn möglich. Wird eine Aktion auf ein Feld angewiesen, wird eine \textit{JobOrder} erstellt, welche alle wichtigen Informationen enthält (vgl. \autoref{image:addjoborder}). Diese JobOrder wird in eine Liste hinzugefügt, welche jedes Frame iteriert wird, und geschaut, ob noch offene Anfragen vorhanden sind. Für jede offene Anfrage wird anhand einer Liste vieler Kriterien eine Biene aus der Liste aller vorhandenen adulten Bienen gesucht (vgl. \autoref{image:assignjobs}). Zuerst werden alle Bienen gesucht, welche keine Anfrage zugewiesen haben, theoretisch die Anfrage ausführen können und ausgewachsen sind. In einer zweiten Iteration werden die nun ausgesuchten Bienen auf Prioritäten geprüft, die Bienen mit der jeweils höchsten Priorität werden in einer Liste gespeichert. Zuletzt werden spezifische Informationen gesucht, wie etwa ein passendes Inventar für die Anfrage, beispielsweise genug Pollen für die Anfrage Pollinate. Letztendlich sollte von dieser dritten Liste die Biene mit dem kürzesten Pfad ausgewählt werden, wobei dieser letzte Schritt aus zeitlichen Gründen noch nicht im Prototyp vorhanden, aber algorithmisch durchaus möglich ist.
+Wie sich in den Interviews und der Analyse von RimWorld gezeigt hat, lassen sich die Art, auf welche Anweisungen an die jeweiligen Einheiten erteilt werden, in \textit{direktes} und \textit{indirektes} Anweisen beziehungsweise Zuweisen. Während in den bereits vorgestellten Titeln meistens auf eine direkte Anweisung der Einheiten zurückgegriffen wird, stellt RimWorld eine Neuerung dar, welche laut [H15] für das Genre des Colony Managements als durchaus positiv von den Probanden aufgefasst wird. Daher wird dieser Anweisungsstil, mitsamt der Prioritätenliste [H13], welche mittels Grafiken verständlicher gemacht wird [H14]. Diese Grafiken finden sich in \autoref{image:prioritylist} wieder. Es gibt fünf verschiedene Prioritätszustände pro Tätigkeitsbereich pro Biene. Falls die Biene aufgrund ihrer Kaste oder ihres Alters eine bestimmte Tätigkeit nicht machen kann, ist der Button nicht vorhanden. Ansonsten gilt, dass ein grüner Pfeil nach oben bedeutet \textit{Hohe Priorität}, ein gelber Strich bedeutet \textit{Mittlere Priorität}, ein roter Pfeil nach unten bedeutet \textit{Niedrige Priorität}. Falls keine Grafik in dem Button angezeigt wird, steht dies für \textit{Untätig}, womit der Spieler auch entscheiden kann, dass manche Bienen bestimmte Tätigkeiten nicht erledigen, selbst wenn möglich. Wird eine Aktion auf ein Feld angewiesen, wird eine \textit{JobOrder} erstellt, welche alle wichtigen Informationen enthält (vgl. \autoref{code:addjoborder}). Diese JobOrder wird in eine Liste hinzugefügt, welche jedes Frame iteriert wird, und geschaut, ob noch offene Anfragen vorhanden sind. Für jede offene Anfrage wird anhand einer Liste vieler Kriterien eine Biene aus der Liste aller vorhandenen adulten Bienen gesucht (vgl. \autoref{code:assignjobs}). Zuerst werden alle Bienen gesucht, welche keine Anfrage zugewiesen haben, theoretisch die Anfrage ausführen können und ausgewachsen sind. In einer zweiten Iteration werden die nun ausgesuchten Bienen auf Prioritäten geprüft, die Bienen mit der jeweils höchsten Priorität werden in einer Liste gespeichert. Zuletzt werden spezifische Informationen gesucht, wie etwa ein passendes Inventar für die Anfrage, beispielsweise genug Pollen für die Anfrage Pollinate. Letztendlich sollte von dieser dritten Liste die Biene mit dem kürzesten Pfad ausgewählt werden, wobei dieser letzte Schritt aus zeitlichen Gründen noch nicht im Prototyp vorhanden, aber algorithmisch durchaus möglich ist.
 
 \begin{figure}
     \begin{center}
@@ -11,21 +11,60 @@ Wie sich in den Interviews und der Analyse von RimWorld gezeigt hat, lassen sich
     \caption{Fertig implementierte Prioritätenliste} \label{image:prioritylist}
 \end{figure}
 
-\begin{figure}
-    \begin{center}
-        \includegraphics[width=300px]{0.bilder/addjoborder.png}
-    \end{center}
-    \caption{Code zur Erstellung einer Anweisung} \label{image:addjoborder}
-\end{figure}
+\definecolor{LightGray}{gray}{0.9}
+\begin{listing}[H]
+\caption{Erstellung einer neuen Anweisung}
+\label{code:addjoborder}
+\begin{minted}[
+bgcolor=LightGray,
+framesep=2mm,
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos,
+]{csharp}
+public JobOrder AddJobOrder(Bee bee, BeeAction action, HexCell hexCell) {
+    JobOrder jobOrder = new JobOrder();
+    jobOrder.Action = action;
+    jobOrder.AssignedBee = bee;
+    jobOrder.Finished = false;
+    jobOrder.MapType = hexCell.MapType;
+    jobOrder.Cell = hexCell;
+    
+    jobQueue.Add(jobOrder);
+    hexCell.AssignJob(jobOrder);
+    hexCell.ShowJobHighlight();
+    return jobOrder;
+}
+\end{minted}
+\end{listing}
 
-\begin{figure}
-    \begin{center}
-        \includegraphics[width=300px]{0.bilder/assignjobs.png}
-    \end{center}
-    \caption{} \label{image:assignjobs}
-\end{figure}
-
-
+\definecolor{LightGray}{gray}{0.9}
+\begin{listing}[H]
+\caption{Zuweisung einer Biene von einer offenen Anweisung}
+\label{code:assignjobs}
+\begin{minted}[
+bgcolor=LightGray,
+framesep=2mm,
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos,
+]{csharp}
+private void AssignJobs() {
+    for (int i = 0; i < jobQueue.Count; i++) {
+        JobOrder jobOrder = jobQueue[i];
+        Bee bee = jobOrder.AssignedBee == null ? 
+        FindBee(jobOrder) : jobOrder.AssignedBee;
+        if (bee) {
+            jobOrder.AssignedBee = bee;
+            bee.AssignJob(jobOrder);
+            this.activeJobs.Add(jobOrder);
+            this.jobQueue.Remove(jobOrder);
+            bee.Travel(jobOrder.Cell);
+        }
+    }
+}
+\end{minted}
+\end{listing}
 
 \subsubsection{Ressourcen}
 Die im Spiel vorhandenen Ressourcen sind in \autoref{table:resources} aufgelistet. Die Gründe für die Auswahl der Ressourcen sind \textit{Sektion 4.1.1} zu finden. \textit{Honigtau} wird nicht als Ressource implementiert, da diese von lebenden Tieren extrahiert wird, und aufgrund von weiteren benötigten Modellen und Animationen keine weiteren Tiere neben den eigentlichen Bienen implementiert werden. Um das Spiel spannender und etwas komplexer zu gestalten werden verschiedene \textit{Sources}, \textit{Converter} und \textit{Drains} (vgl. \textit{Sektion 1.1.2}) verwendet. Alle involvierten Ressourcen, wie auch baubare Waben, sind in \autoref{image:resourceloop} skizziert. Die Zahlen sind dabei rein experimentell und müssen im Verlauf der Tests gegebenenfalls angepasst werden.
@@ -41,8 +80,6 @@ Die im Spiel vorhandenen Ressourcen sind in \autoref{table:resources} aufgeliste
     Einheiten   & Königinnen, Drohnen, Arbeitsbienen         \\ \hline
     \end{tabular}
 \end{table}
-
-
 
 \paragraph{Nektar}
 Nektar wird ausschließlich von Blumen extrahiert, welche eine \textit{Source} darstellen. Jedoch ist an jede Blume eine Bedingung geknüpft. Blumen haben ein eigenes Inventar für Nektar und Pollen, welches bei Extraktion durch eine Biene geleert wird und neu regenerieren muss. Eine Biene sollte also frequentiv die Blumen wechseln, um möglichst viele Ressourcen zu sammeln. Nektar hat eine gewisse Lebensdauer und wird nach einiger Zeit schlecht, wodurch eine gewisse Anzahl von Nektar aus dem Spiel entfernt wird. Diese Lebensdauer agiert dadurch als \textit{Drain}.

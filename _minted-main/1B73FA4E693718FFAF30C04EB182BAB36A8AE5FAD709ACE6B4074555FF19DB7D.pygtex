@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{public}\PYG{+w}{ }\PYG{n}{JobOrder}\PYG{+w}{ }\PYG{n+nf}{AddJobOrder}\PYG{p}{(}\PYG{n}{Bee}\PYG{+w}{ }\PYG{n}{bee}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{BeeAction}\PYG{+w}{ }\PYG{n}{action}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{HexCell}\PYG{+w}{ }\PYG{n}{hexCell}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{JobOrder}\PYG{+w}{ }\PYG{n}{jobOrder}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{JobOrder}\PYG{p}{();}
+\PYG{+w}{    }\PYG{n}{jobOrder}\PYG{p}{.}\PYG{n}{Action}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{action}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{jobOrder}\PYG{p}{.}\PYG{n}{AssignedBee}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{bee}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{jobOrder}\PYG{p}{.}\PYG{n}{Finished}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{k}{false}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{jobOrder}\PYG{p}{.}\PYG{n}{MapType}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{hexCell}\PYG{p}{.}\PYG{n}{MapType}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{jobOrder}\PYG{p}{.}\PYG{n}{Cell}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n}{hexCell}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{n}{jobQueue}\PYG{p}{.}\PYG{n}{Add}\PYG{p}{(}\PYG{n}{jobOrder}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{hexCell}\PYG{p}{.}\PYG{n}{AssignJob}\PYG{p}{(}\PYG{n}{jobOrder}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{hexCell}\PYG{p}{.}\PYG{n}{ShowJobHighlight}\PYG{p}{();}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{jobOrder}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
