@@ -1,2 +1,35 @@
 \subsection{Geschichte}
-Bereits seit dem Jahr 1964 existieren Ressource Management Games. Das erste verzeichnete Spiel trägt dem Titel \glqq The Sumerian Game\grqq, wurde entwickelt von Mabel Addis und spielt in dem antiken sumerischen Stadtstaat Lagash. Die Aufgabe des Spielers war es, in drei verschiedenen Segmenten mit jeweils eigenen Runden, die Bevölkerung und die Ressourcen so anzuordnen, dass ein erfolgreiches Überleben der Einwohner gesichert ist, trotz zufälliger Katastrophen oder Events. Seitdem hat sich in der Branche des Game Developments und der Kategorie der Resource Management Games einiges getan, von SimCity über Anno, bis hin zu RimWorld oder Factorio. Es gibt verschiedenste Unterkategorien von Resource Management Games, welche alle eigene Siegbedingungen, Tücken und Eigenschaften besitzen, wie auch typische UI-Elemente und -Anordnungen. Die Branche ist erfolgreicher denn je und erfreut sich stetigem Wachstum, doch die Frage ist, in welche Richtung werden sich Resource Management Games entwickeln? Gibt es zurzeit Optimierungsbedarf an bestimmten Stellen? Was hält den Spieler dazu an, weiter das Spiel zu spielen, und wie kann man den Spaß optimieren? Was sind gängige Ressourcen, und was eher untypische? Gibt es eine (bisher) minimale und maximale Komplexität?
+Bereits seit dem Jahr 1964 existieren Ressource Management Games. Das erste verzeichnete Spiel trägt dem Titel \glqq The Sumerian Game\grqq, wurde entwickelt von Mabel Addis und spielt in dem antiken sumerischen Stadtstaat Lagash. Die Aufgabe des Spielers war es, in drei verschiedenen Segmenten mit jeweils eigenen Runden, die Bevölkerung und die Ressourcen so anzuordnen, dass ein erfolgreiches Überleben der Einwohner gesichert ist, trotz zufälliger Katastrophen oder Events \cite*[]{sumeriangame}. Ein Ausschnitt des Spielgeschehens kann \autoref{code:sumeriangame} entnommen werden. 
+ Seitdem hat sich in der Branche des Game Developments und der Kategorie der Resource Management Games einiges getan, von SimCity über Anno, bis hin zu RimWorld oder Factorio. Es gibt verschiedenste Unterkategorien von Resource Management Games, welche alle eigene Siegbedingungen, Tücken und Eigenschaften besitzen, wie auch typische UI-Elemente und -Anordnungen. Das momentan am besten verkaufte Resource Management Game auf der Online Spiele Plattform \textit{Steam} ist \textit{Cities: Skylines} mit einem Nettoumsatz von \$88 Millionen Dollar, und wurde im März 2015 veröffentlicht \cite*[]{rmgstatistics}.
+
+\definecolor{LightGray}{gray}{0.9}
+\begin{listing}[H]
+\caption{The Sumerian Game, Ausschnitt}
+\label{code:sumeriangame}
+\begin{minted}[
+bgcolor=LightGray,
+framesep=2mm,
+baselinestretch=1.2,
+fontsize=\footnotesize,
+linenos,
+]{csharp}
+Total population now                        500
+Total farm land under cultivation, acres    600
+Total grain in inventory, bushels           900
+one season old                              900
+two seasons old                               0
+three seasons old                             0
+Total grain just harvested, bushels       13000
+
+Total resources, harvest + inventory      13900
+
+You must now decide how to use your resources.
+
+How many bushels of grain do you wish to FEED your people?
+1000
+How many bushels of grain do you want PLANTED for the next crop?
+2000
+This means that 10000 bushels must be placed in storage. Is this all 
+right? Do you wish to 1-let your decision stand or 2-revise them?
+\end{minted}
+\end{listing}

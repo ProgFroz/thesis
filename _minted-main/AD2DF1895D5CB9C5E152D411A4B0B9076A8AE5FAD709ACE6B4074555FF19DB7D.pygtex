@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Total}\PYG{+w}{ }\PYG{n}{population}\PYG{+w}{ }\PYG{n}{now}\PYG{+w}{                        }\PYG{l+m}{500}
+\PYG{n}{Total}\PYG{+w}{ }\PYG{n}{farm}\PYG{+w}{ }\PYG{n}{land}\PYG{+w}{ }\PYG{n}{under}\PYG{+w}{ }\PYG{n}{cultivation}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{acres}\PYG{+w}{    }\PYG{l+m}{600}
+\PYG{n}{Total}\PYG{+w}{ }\PYG{n}{grain}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{n}{inventory}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{bushels}\PYG{+w}{           }\PYG{l+m}{900}
+\PYG{n}{one}\PYG{+w}{ }\PYG{n}{season}\PYG{+w}{ }\PYG{n}{old}\PYG{+w}{                              }\PYG{l+m}{900}
+\PYG{n}{two}\PYG{+w}{ }\PYG{n}{seasons}\PYG{+w}{ }\PYG{n}{old}\PYG{+w}{                               }\PYG{l+m}{0}
+\PYG{n}{three}\PYG{+w}{ }\PYG{n}{seasons}\PYG{+w}{ }\PYG{n}{old}\PYG{+w}{                             }\PYG{l+m}{0}
+\PYG{n}{Total}\PYG{+w}{ }\PYG{n}{grain}\PYG{+w}{ }\PYG{n}{just}\PYG{+w}{ }\PYG{n}{harvested}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{bushels}\PYG{+w}{       }\PYG{l+m}{13000}
+
+\PYG{n}{Total}\PYG{+w}{ }\PYG{n}{resources}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{harvest}\PYG{+w}{ }\PYG{p}{+}\PYG{+w}{ }\PYG{n}{inventory}\PYG{+w}{      }\PYG{l+m}{13900}
+
+\PYG{n}{You}\PYG{+w}{ }\PYG{n}{must}\PYG{+w}{ }\PYG{n}{now}\PYG{+w}{ }\PYG{n}{decide}\PYG{+w}{ }\PYG{n}{how}\PYG{+w}{ }\PYG{n}{to}\PYG{+w}{ }\PYG{n}{use}\PYG{+w}{ }\PYG{n}{your}\PYG{+w}{ }\PYG{n}{resources}\PYG{p}{.}
+
+\PYG{n}{How}\PYG{+w}{ }\PYG{n}{many}\PYG{+w}{ }\PYG{n}{bushels}\PYG{+w}{ }\PYG{n}{of}\PYG{+w}{ }\PYG{n}{grain}\PYG{+w}{ }\PYG{k}{do}\PYG{+w}{ }\PYG{n}{you}\PYG{+w}{ }\PYG{n}{wish}\PYG{+w}{ }\PYG{n}{to}\PYG{+w}{ }\PYG{n}{FEED}\PYG{+w}{ }\PYG{n}{your}\PYG{+w}{ }\PYG{n}{people}\PYG{p}{?}
+\PYG{l+m}{1000}
+\PYG{n}{How}\PYG{+w}{ }\PYG{n}{many}\PYG{+w}{ }\PYG{n}{bushels}\PYG{+w}{ }\PYG{n}{of}\PYG{+w}{ }\PYG{n}{grain}\PYG{+w}{ }\PYG{k}{do}\PYG{+w}{ }\PYG{n}{you}\PYG{+w}{ }\PYG{n}{want}\PYG{+w}{ }\PYG{n}{PLANTED}\PYG{+w}{ }\PYG{k}{for}\PYG{+w}{ }\PYG{n}{the}\PYG{+w}{ }\PYG{n}{next}\PYG{+w}{ }\PYG{n}{crop}\PYG{p}{?}
+\PYG{l+m}{2000}
+\PYG{n}{This}\PYG{+w}{ }\PYG{n}{means}\PYG{+w}{ }\PYG{n}{that}\PYG{+w}{ }\PYG{l+m}{10000}\PYG{+w}{ }\PYG{n}{bushels}\PYG{+w}{ }\PYG{n}{must}\PYG{+w}{ }\PYG{n}{be}\PYG{+w}{ }\PYG{n}{placed}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{n}{storage}\PYG{p}{.}\PYG{+w}{ }\PYG{n}{Is}\PYG{+w}{ }\PYG{k}{this}\PYG{+w}{ }\PYG{n}{all}
+\PYG{n}{right}\PYG{p}{?}\PYG{+w}{ }\PYG{n}{Do}\PYG{+w}{ }\PYG{n}{you}\PYG{+w}{ }\PYG{n}{wish}\PYG{+w}{ }\PYG{n}{to}\PYG{+w}{ }\PYG{l+m}{1}\PYG{p}{\PYGZhy{}}\PYG{k}{let}\PYG{+w}{ }\PYG{n}{your}\PYG{+w}{ }\PYG{n}{decision}\PYG{+w}{ }\PYG{n}{stand}\PYG{+w}{ }\PYG{n}{or}\PYG{+w}{ }\PYG{l+m}{2}\PYG{p}{\PYGZhy{}}\PYG{n}{revise}\PYG{+w}{ }\PYG{n}{them}\PYG{p}{?}
+\end{Verbatim}
