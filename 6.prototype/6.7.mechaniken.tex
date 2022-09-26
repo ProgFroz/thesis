@@ -174,27 +174,9 @@ Das Inventar besitzt jede Biene und zeigt an, was diese gerade trägt. Getragen 
 Der momentane Auftrag ist ebenfalls Teil der Biene. Dieser zeigt dem Nutzer, was diese Biene gerade vorhat und wieso sie sich zu der bestimmten Stelle bewegt.
 
 \paragraph{Genetische Eigenschaften / Traits} 
-Die genetischen Eigenschaften beziehungsweise \textit{Traits} sind immer exakt drei Stück und werden nach [H6] in überschaubarer Anzahl gehalten und so benannt, dass aus dem Namen der Effekt grundlegend ersichtlich ist. Diese können sowohl \textit{positive} als auch \textit{negative} Auswirkungen auf die Effizienz der einzelnen Biene haben, wobei nicht eindeutig erkennbar sein soll, welcher der effektiv beste oder schlechteste Trait ist, der zur Auswahl steht, um [H7] nachzugehen, und Nutzer-eigene Strategien zu fördern. Die möglichen Traits und ihre Wahrscheinlichkeiten sind in \autoref{table:traits} zu finden. Die Traits sind vererbbar, wobei bei der Vererbung eine Chance besteht, dass ein Trait \textit{mutiert} und deshalb in einen anderen, zufälligen, geändert wird. Wird eine Königin von mehreren verschiedenen Drohnen besamt, werden die Erbinformationen gespeichert. Ob der jeweilige Trait nun von der Seite des Vaters oder der Seite der Mutter übernommen wird, ist gleichverteilt 50:50. Seien die besamenden Drohnen folgende:
+Die genetischen Eigenschaften beziehungsweise \textit{Traits} sind immer exakt drei Stück und werden nach [H6] in überschaubarer Anzahl gehalten und so benannt, dass aus dem Namen der Effekt grundlegend ersichtlich ist. Diese können sowohl \textit{positive} als auch \textit{negative} Auswirkungen auf die Effizienz der einzelnen Biene haben, wobei nicht eindeutig erkennbar sein soll, welcher der effektiv beste oder schlechteste Trait ist, der zur Auswahl steht, um [H7] nachzugehen, und Nutzer-eigene Strategien zu fördern. Die möglichen Traits und ihre Wahrscheinlichkeiten sind in \autoref{table:traits} zu finden. Die Traits sind vererbbar, wobei bei der Vererbung eine Chance besteht, dass ein Trait \textit{mutiert} und deshalb in einen anderen, zufälligen, geändert wird. Wird eine Königin von mehreren verschiedenen Drohnen besamt, werden die Erbinformationen gespeichert. Ob der jeweilige Trait nun von der Seite des Vaters oder der Seite der Mutter übernommen wird, ist gleichverteilt 50:50. 
 
-\begin{itemize}
-    \item Drohne A: Schillernd, Arbeitsfreudig, Gesegnet
-    \item Drohne B: Schillernd, Arbeitsfreudig, Verflucht
-    \item Drohne C: Schillernd, Großer Magen, Verdampfer
-\end{itemize} Und die Königin besäße folgende Eigenschaften:
-
-\begin{itemize}
-    \item Königin: Schillernd, Großer Magen, Empfänglich
-\end{itemize} Dann gelten folgende Chancen für die Traits der Brut:
-
-\begin{itemize}
-    \item Schillernd: $100\%$
-    \item Empfänglich: $\frac{1}{2}$
-    \item Großer Magen: $\frac{1}{3} + \frac{1}{2} = \frac{5}{6}$
-    \item Arbeitsfreudig: $\frac{2}{3} \times \frac{1}{2} = \frac{1}{3}$
-    \item Gesegnet: $\frac{1}{3} \times \frac{1}{2} = \frac{1}{6}$
-    \item Verflucht: $\frac{1}{3} \times \frac{1}{2} = \frac{1}{6}$
-    \item Verdampfer: $\frac{1}{3} \times \frac{1}{2} = \frac{1}{6}$
-\end{itemize} Die Traits, welche speziell auf eine gewisse Art von Kaste gelten, werden im Hintergrund gespeichert und es wird ein neuer Trait gezogen. Dieser wird sich vorgemerkt. Sollte die Arbeitsbienenlarve also zur Königin herangezogen werden, wird der vorgemerkte Trait durch den Erstgezogenen ersetzt. Die Traits sind bereits namentlich implementiert, es werden drei bei der Geburt der Biene zugewiesen. Allerdings haben diese im Prototypen noch keine weiteren Effekte und keine passenden Grafiken. Auch werden die Traits noch nicht genetisch vererbt, sondern zufällig gezogen, was sich im Laufe der Entwicklung noch ändern wird.
+Die Traits, welche speziell auf eine gewisse Art von Kaste gelten, werden im Hintergrund gespeichert und es wird ein neuer Trait gezogen. Dieser wird sich vorgemerkt. Sollte die Arbeitsbienenlarve also zur Königin herangezogen werden, wird der vorgemerkte Trait durch den Erstgezogenen ersetzt. Die Traits sind bereits namentlich implementiert, es werden drei bei der Geburt der Biene zugewiesen. Allerdings haben diese im Prototypen noch keine weiteren Effekte und keine passenden Grafiken. Auch werden die Traits noch nicht genetisch vererbt, sondern zufällig gezogen, was sich im Laufe der Entwicklung noch ändern wird.
 
 \paragraph{Mutation}
 Damit eine Diversität entstehen kann, und nicht stetig die gleichen Traits in der Kolonie weitervererbt werden, bedarf es der Möglichkeit einer Mutation. Es besteht eine geringe Chance, dass \textit{nach dem Ziehen} eines vererbten Traits, dieser Trait durch einen völlig anderen ersetzt wird. Diese Mechanik ist in dem Prototypen noch nicht gegeben.
